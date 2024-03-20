@@ -1,0 +1,7 @@
+Instance Segmentation
+
+python3 segment/train.py --workers 8 --device 0 --batch 32  --data data/train.yaml --img 512 --cfg models/segment/gelan-c-seg_custom.yaml --weights 'gelan-c-seg.pt' --hyp hyp.scratch-high.yaml --no-overlap --epochs 50 --close-mosaic 10 --name exercise1_yolov9_seg_train
+
+python3 segment/val.py --data data/val.yaml --img 512 --batch 32 --conf 0.001 --iou 0.5 --device 0 --weights 'runs/train-seg/exercise1_yolov9_seg_train/weights/best.pt' --save-json --name exercise1_yolov9_seg_val
+
+python3 segment/val.py --data data/test.yaml --img 512 --batch 32 --conf 0.001 --iou 0.5 --device 0 --weights 'runs/train-seg/exercise1_yolov9_seg_train/weights/best.pt' --save-json --name exercise1_yolov9_seg_test
