@@ -48,10 +48,8 @@ def via_to_yolo(folder_path, outFolder, xSize, ySize):
                             file1.write(result + '\n')
 
 def main():
-    parser = argparse.ArgumentParser(description='VIA to YOLO Format')
-    parser.add_argument('--img', nargs=2, metavar=('xSize', 'ySize'), type=int, required=True, help='Image size in pixels horizontally and vertically')   
-    args = parser.parse_args()
-    xSize, ySize = args.img
+    xSize = 1024
+    ySize = 1024
     
     folder = 'via'
     outFolder = "yolo"
