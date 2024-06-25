@@ -1,4 +1,0 @@
-./images/test/5.jpg
-./images/test/78.jpg
-./images/test/126.jpg
-./images/test/208.jpg
